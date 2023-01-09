@@ -1,0 +1,133 @@
+<div>
+
+  <div id = userInputs>
+
+    <div>
+    <select class = "dropDown" #types (change)="onSelected(types.value)">
+      <option value="BOOL">BOOL</option>
+      <option value="SINT">SINT</option>
+      <option value="USINT">USINT</option>
+      <option value="INT">INT</option>
+      <option value="UINT">UINT</option>
+      <option value="DINT">DINT</option>
+      <option value="STRING">STRING</option>
+    </select>
+    </div>
+    <div>
+      <app-input-table [selectedType]="selectedType" (inputsEvent)="newData1($event)"></app-input-table>
+    </div>
+    <div>
+      <app-input-table [selectedType]="selectedType" (inputsEvent)="newData2($event)" ></app-input-table>
+    </div>
+    <div>
+      <app-input-table [selectedType]="selectedType" (inputsEvent)="newData3($event)"></app-input-table>
+    </div>
+    <div>
+      <app-input-table [selectedType]="selectedType" (inputsEvent)="newData4($event)"></app-input-table>
+    </div>
+    <div>
+      <app-output-table
+          [selectedType]="selectedType"
+          [bytes]="newData"
+          [dataChanged]="dataChanged"
+      ></app-output-table>
+    </div>
+
+<!--      <div>-->
+<!--      <label>SINT</label>-->
+<!--        <table>-->
+<!--          <tr *ngFor="let row of inputTable1; let i = index; trackBy:trackByFn">-->
+<!--          <td> <input class = "inputValues" [(ngModel)]="inputTable1[i]" (keyup.tab)="valueEntry()" /></td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--&lt;!&ndash;      <input class = "inputValues" [(ngModel)]="inputValue1" (keyup.enter)="valueEntry()" />&ndash;&gt;-->
+<!--      </div>-->
+<!--      <div>-->
+<!--      <label>INT</label>-->
+<!--      <input class = "inputValues" [(ngModel)]="inputValue2" (keyup.enter)="valueEntry()" />-->
+<!--      </div>-->
+<!--      <div>-->
+<!--      <label>SINT2</label>-->
+<!--      <input class = "inputValues" [(ngModel)]="inputValue3" (keyup.enter)="valueEntry()" />-->
+<!--      </div>-->
+<!--      <div>-->
+<!--      <label>INT2</label>-->
+<!--      <input class = "inputValues" [(ngModel)]="inputValue4" (keyup.enter)="valueEntry()" />-->
+<!--      </div>-->
+  </div>
+
+<!--  <div class="conversionOutputs">-->
+
+<!--    <div class="grid-item">-->
+<!--                <table class="Binary">-->
+<!--                  <tr>-->
+<!--                    <th>Binary</th>-->
+<!--                  </tr>-->
+<!--                  <tr  *ngFor="let bit of bitArray">-->
+<!--                    <td class="tableRow">{{ bit }}</td>-->
+<!--                  </tr>-->
+<!--                </table>-->
+<!--    </div>-->
+<!--    <div class="grid-item">-->
+<!--                <table class="SINT">-->
+<!--                  <tr>-->
+<!--                    <th>SINT</th>-->
+<!--                  </tr>-->
+<!--                  <tr *ngFor="let sint of SINT">-->
+<!--                    <td>{{ sint }}</td>-->
+<!--                  </tr>-->
+<!--                </table>-->
+<!--    </div>-->
+<!--    <div class="grid-item">-->
+<!--        <table class="USINT">-->
+<!--          <tr>-->
+<!--            <th>USINT</th>-->
+<!--          </tr>-->
+<!--          <tr *ngFor="let usint of USINT">-->
+<!--            <td>{{ usint }}</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--    <div class="grid-item">-->
+<!--        <table class="STRING">-->
+<!--          <tr>-->
+<!--            <th>String</th>-->
+<!--          </tr>-->
+<!--          <tr *ngFor="let ascii of ASCII">-->
+<!--            <td>{{ ascii }}</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--    <div class="grid-item">-->
+<!--        <table class="INT">-->
+<!--          <tr>-->
+<!--            <th>INT</th>-->
+<!--          </tr>-->
+<!--          <tr *ngFor="let int of INT">-->
+<!--            <td>{{ int }}</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--    <div class="grid-item">-->
+<!--        <table class="UINT">-->
+<!--          <tr>-->
+<!--            <th>UINT</th>-->
+<!--          </tr>-->
+<!--          <tr *ngFor="let uint of UINT">-->
+<!--            <td>{{ uint }}</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--    <div class="grid-item">-->
+<!--        <table class="DINT">-->
+<!--      <tr>-->
+<!--        <th>DINT</th>-->
+<!--      </tr>-->
+<!--      <tr>-->
+<!--        <td>{{ DINT }}</td>-->
+<!--      </tr>-->
+<!--    </table>-->
+<!--    </div>-->
+<!--  </div>-->
+
+</div>

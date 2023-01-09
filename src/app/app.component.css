@@ -1,0 +1,8 @@
+.mainLayout{
+  display: grid;
+  grid-template-color: auto auto;
+  background-color: #2196f3;
+  padding: 10px;
+  display: flex;
+  grid-gap: 1em;
+}

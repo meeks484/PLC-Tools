@@ -1,0 +1,61 @@
+
+#userInputs{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto ;
+  background-color: #2196F3;
+  padding: 10px;
+  display: flex;
+}
+
+
+.inputGroup{
+  margin-left: 10px;
+}
+
+.inputValues{
+  margin-left: 10px;
+  width: 10%
+}
+.conversionOutputs {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+  display: flex;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+
+.mat-header-row, .mat-row {
+  height: 5px;
+  width: 500px;
+  text-align: center;
+}
+.mat-header-cell, .mat-cell{
+  width: 25px;
+  text-align: center;
+}
+
+.SINT{
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+.tableRow{
+  width: 30px;
+  text-align: center;
+}
+
+table.Binary {display: inline-table;}
+table.SINT { display: inline-table; }
+table.USINT { display: inline-table; }
+table.STRING {display: inline-table; }
+table.INT { display: inline-table; }
+table.UINT { display: inline-table; }
+table.DINT { display: inline-table; }
