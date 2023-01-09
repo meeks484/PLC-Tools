@@ -1,0 +1,20 @@
+.conversionOutputs {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+  display: flex;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+
+}
+table.Bits{display: inline-table;}
+table.SINT { display: inline-table; }
+table.INT { display: inline-table; }
+table.DINT { display: inline-table; }

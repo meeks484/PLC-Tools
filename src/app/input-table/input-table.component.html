@@ -1,0 +1,9 @@
+
+<div>
+  <label>SINT</label>
+  <table>
+    <tr *ngFor="let row of inputs; let i = index; trackBy:trackByFn">
+      <td> <input class = "inputValues" [(ngModel)]="inputs[i]" (keydown.tab)="valueEntry()" /></td>
+    </tr>
+  </table>
+</div>
