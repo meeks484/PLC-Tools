@@ -1,0 +1,28 @@
+#conversionOutputs{
+  display: grid;
+  grid-template-columns: auto auto ;
+  padding: 10px;
+  height: 100%
+}
+
+table.outputTable{
+  display: inline-table;
+  height: 100%
+}
+
+#tableData{
+  border: 1px solid darkgrey;
+
+  color: aliceblue;
+  width: var(--dataWidth);
+  text-align: center;
+
+}
+
+#tableHeader{
+  color: darkgrey;
+
+
+
+}
+

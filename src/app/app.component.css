@@ -1,8 +1,13 @@
 .mainLayout{
   display: grid;
-  grid-template-color: auto auto;
-  background-color: #2196f3;
+  grid-template-color: 10% auto;
   padding: 10px;
   display: flex;
   grid-gap: 1em;
+  justify-content: center;
+
 }
+
+/*.routeLink{*/
+/*  padding: 100%;*/
+/*}*/

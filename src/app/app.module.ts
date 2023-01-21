@@ -3,10 +3,9 @@ import { FormsModule } from '@angular/forms';
 import { NgSelectModule} from '@ng-select/ng-select';
 import { BrowserModule } from '@angular/platform-browser';
 import { AgGridModule } from 'ag-grid-angular';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BitTypeConversionService } from './bit-type-conversion.service';
+import { Binary } from './Binary';
 import { DataTypeConversionComponent } from './data-type-conversion/data-type-conversion.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from "@angular/material/grid-list";
@@ -16,10 +15,12 @@ import { UDTStreamComponent } from './udt-stream/udt-stream.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import {RouterModule} from "@angular/router";
-import { DropzoneDirective } from './directive/dropzone.directive';
 import { HttpClientModule} from '@angular/common/http';
 import { InputTableComponent } from './input-table/input-table.component';
 import { OutputTableComponent } from './output-table/output-table.component';
+import { InputSectionComponent } from './input-section/input-section.component';
+import { OutputSectionComponent } from './output-section/output-section.component';
+
 
 
 
@@ -32,9 +33,10 @@ import { OutputTableComponent } from './output-table/output-table.component';
     UDTStreamComponent,
     NavbarComponent,
     HomeComponent,
-    DropzoneDirective,
     InputTableComponent,
-    OutputTableComponent
+    OutputTableComponent,
+    InputSectionComponent,
+    OutputSectionComponent
   ],
     imports: [
         BrowserModule,
@@ -54,7 +56,7 @@ import { OutputTableComponent } from './output-table/output-table.component';
         ])
     ],
   providers: [
-    //BitTypeConversionService
+    Binary
   ],
   bootstrap: [AppComponent]
 })

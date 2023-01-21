@@ -101,6 +101,7 @@ export class UDTStreamComponent {
           case "REAL":
               bitSize = bitSize+FOUR_BYTE_SIZE;
               break;
+
         }
       }
 

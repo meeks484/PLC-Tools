@@ -1,0 +1,18 @@
+#userInputs{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto ;
+  padding: 10px;
+  height: 100%
+}
+
+.tableClass{
+  height: 100%;
+}
+
+.inputValues{
+  width: var(--dataWidth);
+}
+
+#rowHeaders{
+  color: darkgrey;
+}

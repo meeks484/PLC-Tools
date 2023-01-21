@@ -1,4 +1,17 @@
-nav {
-  height: 100%
+/*nav {*/
+/*  height: 100%*/
+/*  width: 100%*/
+/*}*/
 
+.navPanel{
+  background-color: lightgrey;
+  border-bottom: 2px solid darkgrey;
+  border-right: 2px solid darkgrey;
+  border-left: 3px solid grey;
+  border-top: 3px solid grey;
+  padding-right:  25px;
+}
+
+.routeLink{
+  padding-bottom: 5px;
 }

@@ -1,9 +1,25 @@
 
-<div>
-  <label>SINT</label>
-  <table>
-    <tr *ngFor="let row of inputs; let i = index; trackBy:trackByFn">
-      <td> <input class = "inputValues" [(ngModel)]="inputs[i]" (keydown.tab)="valueEntry()" /></td>
-    </tr>
-  </table>
+
+
+
+<div *ngIf=show>
+  <div id = userInputs>
+
+    <div >
+      <table class="tableClass">
+        <tr *ngFor="let row of headers">
+          <td id = "rowHeaders">{{ row }}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div>
+      <table class="tableClass">
+        <tr *ngFor="let row of inputs; let i = index; trackBy:trackByFn">
+          <td><input class="inputValues" [style.--dataWidth.px]="dataWidth" [(ngModel)]="inputs[i]" (keydown.tab)="valueEntry(i)"/></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
 </div>

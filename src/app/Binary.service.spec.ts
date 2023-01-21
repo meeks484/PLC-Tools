@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { BitTypeConversionService } from './bit-type-conversion.service';
+import { Binary } from './Binary';
 
 describe('BitTypeConversionService', () => {
-  let service: BitTypeConversionService;
+  let service: Binary;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(BitTypeConversionService);
+    service = TestBed.inject(Binary);
   });
 
   it('should be created', () => {

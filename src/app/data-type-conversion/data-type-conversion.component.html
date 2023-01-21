@@ -1,60 +1,22 @@
-<div>
+<div id="thisGrid">
 
-  <div id = userInputs>
 
-    <div>
-    <select class = "dropDown" #types (change)="onSelected(types.value)">
-      <option value="BOOL">BOOL</option>
-      <option value="SINT">SINT</option>
-      <option value="USINT">USINT</option>
-      <option value="INT">INT</option>
-      <option value="UINT">UINT</option>
-      <option value="DINT">DINT</option>
-      <option value="STRING">STRING</option>
-    </select>
-    </div>
-    <div>
-      <app-input-table [selectedType]="selectedType" (inputsEvent)="newData1($event)"></app-input-table>
-    </div>
-    <div>
-      <app-input-table [selectedType]="selectedType" (inputsEvent)="newData2($event)" ></app-input-table>
-    </div>
-    <div>
-      <app-input-table [selectedType]="selectedType" (inputsEvent)="newData3($event)"></app-input-table>
-    </div>
-    <div>
-      <app-input-table [selectedType]="selectedType" (inputsEvent)="newData4($event)"></app-input-table>
-    </div>
-    <div>
-      <app-output-table
-          [selectedType]="selectedType"
-          [bytes]="newData"
-          [dataChanged]="dataChanged"
-      ></app-output-table>
-    </div>
-
-<!--      <div>-->
-<!--      <label>SINT</label>-->
-<!--        <table>-->
-<!--          <tr *ngFor="let row of inputTable1; let i = index; trackBy:trackByFn">-->
-<!--          <td> <input class = "inputValues" [(ngModel)]="inputTable1[i]" (keyup.tab)="valueEntry()" /></td>-->
-<!--          </tr>-->
-<!--        </table>-->
-<!--&lt;!&ndash;      <input class = "inputValues" [(ngModel)]="inputValue1" (keyup.enter)="valueEntry()" />&ndash;&gt;-->
-<!--      </div>-->
-<!--      <div>-->
-<!--      <label>INT</label>-->
-<!--      <input class = "inputValues" [(ngModel)]="inputValue2" (keyup.enter)="valueEntry()" />-->
-<!--      </div>-->
-<!--      <div>-->
-<!--      <label>SINT2</label>-->
-<!--      <input class = "inputValues" [(ngModel)]="inputValue3" (keyup.enter)="valueEntry()" />-->
-<!--      </div>-->
-<!--      <div>-->
-<!--      <label>INT2</label>-->
-<!--      <input class = "inputValues" [(ngModel)]="inputValue4" (keyup.enter)="valueEntry()" />-->
-<!--      </div>-->
+  <div class ="grid-item">
+    <app-input-section
+      (typeOut)="catchType($event)"
+      (dataChangedOut)="catchDataChange($event)">
+    </app-input-section>
   </div>
+
+  <div class ="grid-item">
+    <app-output-section
+      [typeObj]="typeObj"
+      [dataChanged]="dataChanged">
+    </app-output-section>
+  </div>
+
+</div>
+
 
 <!--  <div class="conversionOutputs">-->
 
@@ -130,4 +92,3 @@
 <!--    </div>-->
 <!--  </div>-->
 
-</div>

@@ -1,1 +1,18 @@
-<p>output-table works!</p>
+
+<div id = conversionOutputs>
+  <div>
+    <table class = "outputTable">
+      <tr class = "tableRow" *ngFor="let row of headers">
+        <td id = "tableHeader">{{ row }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div>
+    <table class = "outputTable dataTable">
+      <tr class = "tableRow" *ngFor="let row of data;">
+        <td id = "tableData" [style.--dataWidth.px]="dataWidth"> {{row}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
