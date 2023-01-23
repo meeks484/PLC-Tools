@@ -1,0 +1,59 @@
+<div id = gridContainer>
+
+  <div id = "dropDown">
+    <p id = "dropDownHeader">Select the data type to convert from:</p>
+
+    <select class = "dropDown" #types (change)="onSelected(types.value)">
+      <option value="BOOL">BOOL</option>
+      <option value="SINT">SINT</option>
+      <option value="USINT">USINT</option>
+      <option value="INT">INT</option>
+      <option value="UINT">UINT</option>
+      <option value="DINT">DINT</option>
+      <option value="STRING">STRING</option>
+    </select>
+    <p class = "minMax" *ngIf="typeObj.typeName != 'STRING'">
+      min: {{typeObj.minValue}}<br>
+      max: {{typeObj.maxValue}}
+    </p>
+    <p class = "minMax" *ngIf = "typeObj.typeName == 'STRING'">
+      One Character
+    </p>
+  </div>
+  <div>
+    <app-input-table
+      [dataType]="dataType"
+      [tableNum]="0"
+      [typeObj]="typeObj"
+      (typeOut)="catchTypeObj($event)">
+
+    </app-input-table>
+  </div>
+  <div>
+    <app-input-table
+      [dataType]="dataType"
+      [tableNum]="1"
+      [typeObj]="typeObj"
+      (typeOut)="catchTypeObj($event)">
+
+    </app-input-table>
+  </div>
+  <div>
+    <app-input-table
+      [dataType]="dataType"
+      [tableNum]="2"
+      [typeObj]="typeObj"
+      (typeOut)="catchTypeObj($event)">
+
+    </app-input-table>
+  </div>
+  <div>
+    <app-input-table
+      [dataType]="dataType"
+      [tableNum]="3"
+      [typeObj]="typeObj"
+      (typeOut)="catchTypeObj($event)">
+
+    </app-input-table>
+  </div>
+</div>

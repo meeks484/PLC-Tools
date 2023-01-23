@@ -1,0 +1,8 @@
+#conversionOutputs{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 10px;
+  display: flex;
+  height: 95%;
+}
+
