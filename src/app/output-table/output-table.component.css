@@ -11,16 +11,18 @@ table.outputTable{
 }
 
 #tableData{
-  border: 1px solid darkgrey;
+  border: 1px solid darkcyan;
 
   color: aliceblue;
   width: var(--dataWidth);
   text-align: center;
 
+
 }
 
 #tableHeader{
   color: darkgrey;
+
 
 
 

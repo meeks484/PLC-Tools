@@ -10,6 +10,8 @@ export class BoolType extends AType implements IType{
   countPer32 = 32;
   typeValues = Array(this.countPer32)
   rowHeaders = Array(this.countPer32)
+  maxValue: number = 1;
+  minValue: number = 0;
 
   constructor(bit32Input?: number[]) {
     super(0,bit32Input);

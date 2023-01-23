@@ -8,6 +8,8 @@ export class DintType extends ASignedType implements IType{
   characterCount = 10;
   typeValues = Array(this.countPer32);
   rowHeaders = Array(this.countPer32);
+  maxValue = this.maxFunction()
+  minValue = this.minFunction()
 
   constructor (bit32Input?: number[]){
     super(bit32Input);

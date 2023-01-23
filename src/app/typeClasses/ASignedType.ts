@@ -37,14 +37,22 @@ export abstract class ASignedType extends AType{
     if (Number.isNaN(+value))
       return 0
 
-    let max: number = ((2 ** this.bitCount) / 2) - 1;
-    let min: number = (-1) * ((2 ** this.bitCount) / 2);
+    let max: number = this.maxFunction();
+    let min: number = this.minFunction();
     if (value > max)
       return max;
     else if (value < min)
       return min;
     else
       return value;
+  }
+
+  maxFunction(): number{
+    return ((2 ** this.bitCount) / 2) - 1;
+  }
+
+  minFunction(): number{
+    return (-1) * ((2 ** this.bitCount) / 2);
   }
 }
 

@@ -10,6 +10,8 @@ export class UintType extends AUnsignedType implements IType {
   characterCount = 6
   typeValues = Array(this.countPer32);
   rowHeaders = Array(this.countPer32);
+  maxValue = this.maxFunction()
+  minValue = this.minFunction()
 
   constructor (bit32Input?: number[]){
     super(bit32Input);
