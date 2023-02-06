@@ -5,18 +5,18 @@ export abstract class AType {
   abstract typeName: string;
   abstract countPer32: number;
   abstract rowHeaders: string[];
-  abstract typeValues: number[];
+  abstract typeValues: any[];
 
   bits32: number = 32;
   thirtyTwo: number[] = Array(this.bits32);
   maxInputTables: number = 4;
   show: boolean[] = Array(this.maxInputTables);
 
-  protected constructor(initial: any, bit32Input?: number[]) {
+  protected constructor(bit32Input?: number[]) {
     if (bit32Input !== undefined) {
       this.thirtyTwo = bit32Input;
     } else {
-      this.thirtyTwo.fill(initial)
+      this.thirtyTwo.fill(0)
     }
 
   }
@@ -34,7 +34,8 @@ export abstract class AType {
   protected buildRowHeader(): void{
     this.rowHeaders = Array(this.countPer32);
     for (let i = 0 ; i < this.countPer32 ; ++i){
-      this.rowHeaders[i] = this.typeName + "[" + i.toString() + "]";
+      // this.rowHeaders[i] = this.typeName + "[" + i.toString() + "]";
+      this.rowHeaders[i] = "[" + i.toString() + "]";
     }
   }
 

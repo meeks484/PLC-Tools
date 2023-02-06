@@ -14,7 +14,7 @@ export class BoolType extends AType implements IType{
   minValue: number = 0;
 
   constructor(bit32Input?: number[]) {
-    super(0,bit32Input);
+    super(bit32Input);
     this.buildRowHeader()
     this.getTypeValues()
     this.getShow(4);

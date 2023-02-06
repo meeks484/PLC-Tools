@@ -1,3 +1,10 @@
+#pageSettings{
+  display: grid;
+  grid-template-columns: auto;
+  /*height: 100vh;*/
+  place-items: center;
+}
+
 h1{
   color: lavender;
   text-align: center;
@@ -7,25 +14,44 @@ h1{
 
 .instructions{
   color: lavender;
+  justify-items: center;
+
+
+
+}
+.instructionHeader{
+  color: lavender;
+}
+.csv-file-chooser-section{
+  background-color: white;
+  width: 50%;
 }
 
-.conversionOutputs {
+#gridContainer{
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto;
-  background-color: #2196F3;
-  padding: 10px;
-  display: flex;
+  grid-template-columns: auto auto auto auto auto ;
+
+}
+#contentContainer{
+  justify-content: center;
 }
 
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 30px;
+
+.typeExample{
+  color: darkgrey;
+  border: 1px solid darkcyan;
+}
+
+.Example{
+  /*border: 1px solid darkgrey;*/
+}
+
+.exampleInstructions{
   text-align: center;
+  color: lightgrey;
+  margin: 0;
+}
+.exampleTable{
+margin: auto
 
 }
-table.Bits{display: inline-table;}
-table.SINT { display: inline-table; }
-table.INT { display: inline-table; }
-table.DINT { display: inline-table; }

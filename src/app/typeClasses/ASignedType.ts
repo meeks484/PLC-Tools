@@ -7,7 +7,7 @@ export abstract class ASignedType extends AType{
   abstract characterCount: number;
 
   constructor(bitThirtyTwo?: number[]) {
-    super(0, bitThirtyTwo);
+    super(bitThirtyTwo);
   }
   protected getTypeValues(): void{
     this.typeValues = Array(this.countPer32)
@@ -44,7 +44,7 @@ export abstract class ASignedType extends AType{
     else if (value < min)
       return min;
     else
-      return value;
+      return Math.floor(value);
   }
 
   maxFunction(): number{

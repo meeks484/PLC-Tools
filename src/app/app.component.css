@@ -1,13 +1,18 @@
 .mainLayout{
   display: grid;
-  grid-template-color: 10% auto;
+  grid-template-columns: 20vw 60vw 20vw;
   padding: 10px;
-  display: flex;
+
   grid-gap: 1em;
-  /*justify-content: center;*/
+  min-width: 1vw;
+  justify-content: left;
+
 
 }
 
-/*.routeLink{*/
-/*  padding: 100%;*/
-/*}*/
+#navbar{
+
+}
+#router{
+
+}

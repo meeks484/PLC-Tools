@@ -1,8 +1,32 @@
+
+#gridContainer{
+  display: grid;
+  grid-template-columns: auto;
+  place-items: center;
+  padding: 10px;
+  min-height: 100%;
+}
+
+
 h1{
   color: lavender;
   text-align: center;
   font-size: xxx-large;
   font-family: "Bradley Hand ITC";
+}
+
+.grid-item{
+  border-bottom: 1px solid white;
+}
+
+#inputValues{
+
+}
+
+#outputValues{
+  /*background-color: orange;*/
+  /*height: fit-content;*/
+
 }
 
 h2{
@@ -12,30 +36,12 @@ h2{
   font-size: xx-large;
 
 }
-#thisGrid{
-  display: grid;
-  grid-template-columns: auto;
-  padding: 10px;
-  height: 95%;
-}
-#inputValues{
-  justify-content: left;
-}
-.grid-item{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid white;
-}
 
 #typeCompare{
   color: lavender;
-  /*align-items: center;*/
-  /*justify-content: center;*/
 }
 
 #tableProp{
-
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -43,20 +49,20 @@ h2{
   border-bottom: 1px solid white;
 
 }
-.rowData{
-  width: 100px;
-  /*padding-left: 10px;*/
-  /*padding-right: 10px;*/
-  text-align: center;
-
-}
 
 #dataProp{
   border-bottom: 1px solid white;
-  /*background-color: grey;*/
 }
-/*#inputValues{*/
-/*  border-bottom: 1px solid white;*/
-/*}*/
 
+.rowData {
+  width: 100px;
+  text-align: center;
+}
+
+
+.dataNotes{
+  color: lavender;
+  font-size: medium;
+  line-height: 2;
+}
 

@@ -1,6 +1,7 @@
-<div id="thisGrid">
+<div id="gridContainer">
 
-<h1>Data Type Conversions</h1>
+  <h1>Data Type Conversions</h1>
+
   <div class ="grid-item" id="inputValues">
     <app-input-section
       (typeOut)="catchType($event)"
@@ -8,11 +9,13 @@
     </app-input-section>
   </div>
 
-  <div class ="grid-item">
-    <app-output-section
-      [typeObj]="typeObj"
-      [dataChanged]="dataChanged">
-    </app-output-section>
+  <div class ="grid-item" >
+    <div id = "outputValues">
+      <app-output-section
+        [typeObj]="typeObj"
+        [dataChanged]="dataChanged">
+      </app-output-section>
+    </div>
   </div>
 
   <h2>PLC Data Types</h2>
@@ -31,6 +34,41 @@
           </tr>
     </table>
   </div>
+
+  <h2>Notes on Data Types</h2>
+
+  <ul class = "dataNotes">
+    <li>Memory is allocated in 32 bit blocks.</li>
+    <ul>
+      <li>Creating a boolean tag in a controller / program scope will allocate 32 bits of memory</li>
+      <li>Best practice for memory allocation is to use User Defined Data Types (UDT) where:</li>
+      <ul>
+        <li>Like data types are grouped together: BOOLS are first, then SINTS, etc</li>
+        <ul>
+          <li>Assigning a BOOL, and then a DINT, and then another BOOL will allocate 86 bits of memory</li>
+          <li>But assigning two (or 32) BOOLs, and then a DINT will only allocate 64 bits of memory.</li>
+        </ul>
+        <li>Memory will still allocate 32 bits for creating a BOOL, but you can create 32 BOOLs within that same 32 bit block.</li>
+      </ul>
+      <li>Use Add On Instructions (AOI). </li>
+      <ul>
+        <li>AOI's will allocate its memory according to how many BOOLs, INTs, etc it needs</li>
+      </ul>
+      <li>Use DINTs within your controller / program scopes to be used as 32 BOOLs</li>
+      <ul>
+        <li>This is bad practice in some cases because tags should be properly, and individually named.</li>
+        <li>But this is good in cases like one shot [ONS] instructions. Those do not need unique names. name
+            a DINT as ONS, and then use ONS.0, ONS.1, etc throughout your code on all [ONS] instructions. </li>
+      </ul>
+    </ul>
+    <li>Strings use A LOT of memory.</li>
+    <ul>
+      <li>Each string will have a DINT within it to represent the length of the string</li>
+      <li>Each character of a string consumes 8 bits</li>
+      <li>Strings that have an undefined length will allocate 82 characters in its memory (656 bits).</li>
+      <li>Best practice is to define the length of a string by using custom string types.</li>
+    </ul>
+  </ul>
 
 </div>
 

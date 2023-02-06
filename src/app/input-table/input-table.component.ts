@@ -50,6 +50,11 @@ export class InputTableComponent implements OnChanges{
       this.headers = Array(8);
       this.buildBoolHeads();
     }
+    else if (this.dataType == "REAL"){
+      this.inputs = Array(1).fill(0);
+      this.headers = Array(1)
+      this.headers[0] = this.typeObj.rowHeaders[this.tableNum]
+    }
     else {
       this.inputs = this.typeObj.typeValues
       this.headers = this.typeObj.rowHeaders
@@ -67,7 +72,7 @@ export class InputTableComponent implements OnChanges{
     else
       realIndex = index;
     this.typeObj.insertValue(this.inputs[index], realIndex)
-    this.inputs[index] = this.typeObj.typeValues[index];
+    this.inputs[index] = this.typeObj.typeValues[realIndex];
     this.typeOut.emit(this.typeObj);
   }
 

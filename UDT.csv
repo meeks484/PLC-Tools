@@ -1,10 +1,5 @@
-﻿statusBits,BOOL[7]
-processValue0,SINT
-processValue1,SINT
-processValue2,SINT
-processValue3,SINT
-processValue4,SINT
-processValue5,SINT
-processValue6,SINT
-errorNumber,UINT
-errorMsg,STRING[18]
+﻿pressureInRange,BOOL
+pressureAlarm,BOOL[7]
+chamberPressure,DINT
+whereAmI,BOOL
+pressureMsg,STRING10

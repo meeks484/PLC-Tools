@@ -9,6 +9,7 @@ import {UintType} from "../typeClasses/UintType";
 import {DintType} from "../typeClasses/dintType";
 import {UdintType} from "../typeClasses/UdintType";
 import {StringType} from "../typeClasses/StringType";
+import {FloatType} from "../typeClasses/FloatType";
 
 @Component({
   selector: 'app-input-section',
@@ -48,6 +49,8 @@ export class InputSectionComponent{
         this.typeObj = new UdintType(); break;
       case "STRING":
         this.typeObj = new StringType(); break;
+      case "REAL":
+        this.typeObj = new FloatType(); break;
     }
 
     this.dataType = value;

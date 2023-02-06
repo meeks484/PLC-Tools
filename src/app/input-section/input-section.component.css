@@ -1,6 +1,8 @@
 #gridContainer{
   display: grid;
   grid-template-columns: 30% auto auto auto auto ;
+  width: 100%;
+
 
 }
 

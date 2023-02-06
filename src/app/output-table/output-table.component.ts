@@ -9,7 +9,7 @@ import {IType} from "../typeClasses/IType";
 })
 export class OutputTableComponent implements OnChanges{
   @Input() typeObj: IType;
-
+  typeName: string;
   headers: string[];
   dataWidth: number;
   data: any[];
@@ -21,5 +21,6 @@ export class OutputTableComponent implements OnChanges{
     this.headers = this.typeObj.rowHeaders
     this.dataWidth = this.typeObj.characterCount * 10;
     this.data = this.typeObj.typeValues;
+    this.typeName = this.typeObj.typeName;
   }
 }

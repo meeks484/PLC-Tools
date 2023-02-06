@@ -1,78 +1,73 @@
+<div id = "pageSettings">
+  <h1>
+    User Defined Datatype <br>
+    Bit Stream
+  </h1>
 
-<h1>User Defined Datatype Bit Stream</h1>
+<div id = contentContainer>
+  <p class = "instructions">
+    Export your UDT to a CSV file and then upload it here<br>
+  </p>
+  <ul class = "instructions">
+    <li>The first column needs to be the name of the tag</li>
+    <li>The second column needs to be your data type</li>
+    <li>All other data in the file will be ignored</li>
+    <li>Use brackets to indicate arrays (eg: BOOL[5])</li>
+    <li>STRING types are 88 BYTES unless its length is defined (eg: STRING5)</li>
+    <li>Replace custom data type names with "customT", and then followed by the number of BYTES in that type (eg: customT12)</li>
+    <li>File format exported from Studio Logix will work as is</li>
+    <li>Accepted Types: BOOL, SINT, USINT, INT, UINT, DINT, UDINT, REAL, STRING</li>
+  </ul>
 
-<p class = "instructions">
-  Export your UDT into a .CSV file.<br>
-  The first two columns should follow this format:
-</p>
-
-<img src="assets/images/UDTexample.jpg">
-
-<p class = "instructions">
-  Only the first two columns are analyzed, rest of columns can be anything.<br>
-  Do not use custom data types
-</p>
-<div class="csv-file-chooser-section">
-
-  <input type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
-         accept=".csv" />
-
-</div>
-
-<div class="conversionOutputs">
-
-<div class="grid-item">
-  <table class="Bits">
-    <tr>
-      <th>Bits</th>
-    </tr>
-    <tr  *ngFor="let bit of bitColumn">
-      <td class="tableRow">{{ bit }}</td>
-    </tr>
-  </table>
-</div>
-<div class="grid-item">
-  <table class="SINT">
-    <tr>
-      <th>SINT</th>
-    </tr>
-    <tr *ngFor="let sint of sintColumn">
-      <td>{{ sint }}</td>
-    </tr>
-  </table>
-</div>
-
-<div class="grid-item">
-  <table class="INT">
-    <tr>
-      <th>INT</th>
-    </tr>
-    <tr *ngFor="let int of intColumn">
-      <td>{{ int }}</td>
-    </tr>
-  </table>
-</div>
-
-<div class="grid-item">
-  <table class="DINT">
-    <tr>
-      <th>DINT</th>
-    </tr>
-    <tr *ngFor = "let dint of dintColumn">
-      <td>{{ dint }}</td>
-    </tr>
-  </table>
-</div>
-
-  <div class="grid-item">
-    <table class="tagNames">
-      <tr>
-        <th>Tags</th>
-      </tr>
-      <tr *ngFor = "let tag of tagColumn">
-        <td>{{ tag }}</td>
+  <div class = "Example">
+    <p class = "exampleInstructions">Example .CSV file</p>
+    <table class = "exampleTable">
+      <tr   *ngFor="let row of acceptedTypes">
+        <td class="typeExample" *ngFor="let col of row">
+          {{col}}
+        </td>
       </tr>
     </table>
+  </div>
+
+  <p class="instructions">
+    .CSV File Upload
+  </p>
+
+  <div class="csv-file-chooser-section">
+    <input type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
+           accept=".csv"/>
+  </div>
+</div>
+
+
+
+
+  <div id=gridContainer>
+    <app-stream-table
+      [streamTable]="boolStream"
+      [fileUploaded]="fileUploaded">
+    </app-stream-table>
+
+    <app-stream-table
+      [streamTable]="sintStream"
+      [fileUploaded]="fileUploaded">
+    </app-stream-table>
+
+    <app-stream-table
+      [streamTable]="intStream"
+      [fileUploaded]="fileUploaded">
+    </app-stream-table>
+
+    <app-stream-table
+      [streamTable]="dintStream"
+      [fileUploaded]="fileUploaded">
+    </app-stream-table>
+
+    <app-stream-table
+      [streamTable]="tagStream"
+      [fileUploaded]="fileUploaded">
+    </app-stream-table>
   </div>
 
 </div>

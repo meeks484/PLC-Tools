@@ -1,5 +1,10 @@
 
+
+
+<p id = "columnHeader">{{typeName}}</p>
+
 <div id = conversionOutputs>
+
   <div>
     <table class = "outputTable">
       <tr class = "tableRow" *ngFor="let row of headers">
@@ -11,8 +16,10 @@
   <div>
     <table class = "outputTable dataTable">
       <tr class = "tableRow" *ngFor="let row of data;">
-        <td id = "tableData" [style.--dataWidth.px]="dataWidth"> {{row}}</td>
+        <td class = "tableData" [style.--dataWidth.px]="dataWidth"> {{row}}</td>
       </tr>
     </table>
   </div>
 </div>
+
+

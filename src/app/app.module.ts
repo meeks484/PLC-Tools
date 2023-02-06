@@ -20,6 +20,8 @@ import { InputTableComponent } from './input-table/input-table.component';
 import { OutputTableComponent } from './output-table/output-table.component';
 import { InputSectionComponent } from './input-section/input-section.component';
 import { OutputSectionComponent } from './output-section/output-section.component';
+import { StreamTableComponent } from './stream-table/stream-table.component';
+import { Rs232Component } from './rs232/rs232.component';
 
 
 
@@ -36,7 +38,9 @@ import { OutputSectionComponent } from './output-section/output-section.componen
     InputTableComponent,
     OutputTableComponent,
     InputSectionComponent,
-    OutputSectionComponent
+    OutputSectionComponent,
+    StreamTableComponent,
+    Rs232Component
   ],
     imports: [
         BrowserModule,
@@ -52,7 +56,8 @@ import { OutputSectionComponent } from './output-section/output-section.componen
         RouterModule.forRoot([
           {path: '', component: HomeComponent},
           {path: 'typeConversion', component: DataTypeConversionComponent},
-          {path: 'UDTStream', component: UDTStreamComponent}
+          {path: 'UDTStream', component: UDTStreamComponent},
+          {path: 'rs232', component: Rs232Component}
         ])
     ],
   providers: [

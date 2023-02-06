@@ -8,6 +8,7 @@ import {UintType} from "../typeClasses/UintType";
 import {DintType} from "../typeClasses/dintType";
 import {UdintType} from "../typeClasses/UdintType";
 import {StringType} from "../typeClasses/StringType";
+import {FloatType} from "../typeClasses/FloatType";
 
 @Component({
   selector: 'app-output-section',
@@ -26,6 +27,7 @@ export class OutputSectionComponent implements OnChanges{
   DINT: IType;
   UDINT: IType;
   STRING: IType;
+  REAL: IType;
 
   constructor() {
     this.typeObj = new BoolType()
@@ -41,6 +43,7 @@ export class OutputSectionComponent implements OnChanges{
     this.DINT = new DintType(this.typeObj.thirtyTwo);
     this.UDINT = new UdintType(this.typeObj.thirtyTwo);
     this.STRING = new StringType(this.typeObj.thirtyTwo);
+    this.REAL = new FloatType(this.typeObj.thirtyTwo);
   }
 
   ngOnChanges(changes: SimpleChanges) {

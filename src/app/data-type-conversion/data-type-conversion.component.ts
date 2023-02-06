@@ -41,7 +41,6 @@ export class DataTypeConversionComponent {
         name: x,
         data: this.typeCompare.filter(y => y[0] === x)
       }))
-    console.log(newArray)
     return newArray
   }
 

@@ -7,7 +7,7 @@ export abstract class AUnsignedType extends AType{
   abstract characterCount: number;
 
   constructor(bitThirtyTwo?: number[]) {
-    super(0, bitThirtyTwo);
+    super(bitThirtyTwo);
   }
 
   protected getTypeValues(): void{
