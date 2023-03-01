@@ -1,18 +1,61 @@
-.mainLayout{
+
+
+.page-container {
+
+  background: #fafafa;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  flex-direction: column;
+  line-height: normal;
+
+}
+
+#headerGrid{
   display: grid;
-  grid-template-columns: 20vw 60vw 20vw;
-  padding: 10px;
+  grid-template-columns: 10% 80% 10%;
+  background: #3f51b5;
+  color: #fff;
+  font-weight: bold;
+}
 
-  grid-gap: 1em;
-  min-width: 1vw;
-  justify-content: left;
+.menu-button {
+  min-width: 0;
+  padding: 0;
+  line-height: normal;
+  ;
+}
 
+.app-title {
+  padding: 0 3px;
+  font-size: xxx-large;
+}
+
+
+.sidenav-container {
+  flex: 1;
+}
+
+.sidenav {
+  min-width: 240px;
+}
+
+a {
+  display: block;
+  padding: 6px 24px;
+  width: 100%;
+  text-align: center;
+}
+
+#navigationPages{
 
 }
 
-#navbar{
 
-}
-#router{
-
-}

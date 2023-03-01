@@ -6,7 +6,7 @@
 
 <div id = contentContainer>
   <p class = "instructions">
-    Export your UDT to a CSV file and then upload it here<br>
+    Copy and paste your UDT to a .CSV file, and then upload it here.<br>
   </p>
   <ul class = "instructions">
     <li>The first column needs to be the name of the tag</li>
@@ -30,17 +30,24 @@
     </table>
   </div>
 
-  <p class="instructions">
-    .CSV File Upload
-  </p>
 
   <div class="csv-file-chooser-section">
-    <input type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
-           accept=".csv"/>
+
+    <p class="instructions">
+      Upload Your .CSV File Below
+    </p>
+    <div id="chooseFile">
+      <input
+             type="file" #fileImportInput
+             name="File Upload"
+             id="csvFileUpload"
+             (change)="fileChangeListener($event)"
+             accept=".csv"
+      />
+    </div>
+
   </div>
 </div>
-
-
 
 
   <div id=gridContainer>

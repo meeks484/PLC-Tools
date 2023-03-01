@@ -15,11 +15,12 @@
 
     <div>
       <table class="tableClass">
-        <tr *ngFor="let row of inputs; let i = index; trackBy:trackByFn">
-          <td><input class="inputValues" [style.--dataWidth.px]="dataWidth" [(ngModel)]="inputs[i]" (keydown.tab)="valueEntry(i)"/></td>
+        <tr *ngFor="let row of inputs; let i = index; trackBy trackByFn">
+          <td><input class="inputValues" [style.--dataWidth.px]="dataWidth" [(ngModel)]="inputs[i]" (change)="valueEntry(i)"/></td>
         </tr>
       </table>
     </div>
 
   </div>
 </div>
+

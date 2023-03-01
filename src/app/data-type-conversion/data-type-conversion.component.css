@@ -13,6 +13,7 @@ h1{
   text-align: center;
   font-size: xxx-large;
   font-family: "Bradley Hand ITC";
+  line-height: 50px;
 }
 
 .grid-item{
@@ -64,5 +65,7 @@ h2{
   color: lavender;
   font-size: medium;
   line-height: 2;
+  max-width: 90vw;
+  width: 750px;
 }
 

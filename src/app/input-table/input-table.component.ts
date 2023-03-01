@@ -2,7 +2,6 @@ import {
   Component,
   Input,
   Output,
-  OnInit,
   OnChanges,
   SimpleChanges,
   EventEmitter
@@ -10,7 +9,6 @@ import {
 
 import {Binary} from "../Binary";
 import {IType} from "../typeClasses/IType";
-import {SintType} from "../typeClasses/SintType";
 import {BoolType} from "../typeClasses/BoolType";
 
 @Component({
@@ -20,11 +18,8 @@ import {BoolType} from "../typeClasses/BoolType";
 })
 export class InputTableComponent implements OnChanges{
   @Input() dataType: string
-  //@Input() show: boolean
-  //@Input() headers: string[]
   @Input() typeObj: IType;
   @Input() tableNum: number;
-  //@Output()  inputsOut = new EventEmitter<any>();
   @Output() typeOut = new EventEmitter<IType>();
 
   inputs: any[] = [];
@@ -39,7 +34,7 @@ export class InputTableComponent implements OnChanges{
     this.buildBoolHeads();
   }
 
-  trackByFn(index: any, item: any){
+  trackByFn(index: any, inputs: any){
     return index;
   }
 

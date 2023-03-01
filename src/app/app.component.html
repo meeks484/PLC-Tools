@@ -2,13 +2,49 @@
 
 
 
-<div class="mainLayout">
-  <div id="navbar">
-    <app-navbar ></app-navbar>
-  </div>
+<!--<div class="mainLayout">-->
+<!--  <div id="navbar">-->
+<!--    <app-navbar ></app-navbar>-->
+<!--  </div>-->
 
-  <div id="router">
-    <router-outlet></router-outlet>
-  </div>
+<!--  <div id="router">-->
+<!--    <router-outlet></router-outlet>-->
+<!--  </div>-->
 
+<!--</div>-->
+
+<div class="page-container">
+  <header>
+    <div id = "headerGrid">
+
+      <button mat-button class="menu-button" (click)="sidenav.toggle()">
+        <mat-icon>{{ isMenuOpen ? 'menu_open' : 'menu' }}</mat-icon>
+      </button>
+
+      <a routerLink="/">
+        <span class="app-title">PLC Tools</span>
+      </a>
+      <div></div>
+    </div>
+  </header>
+
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav autoFocus="false" mode="over" [(opened)]="isMenuOpen" class="sidenav">
+      <a class="routeLink" routerLink="" (click)="sidenav.toggle()">Home</a>
+      <a class="routeLink" routerLink="/typeConversion" (click)="sidenav.toggle()">Data Type Conversion</a>
+      <a class="routeLink" routerLink="UDTStream" (click)="sidenav.toggle()">UDT Data Stream</a>
+      <a class="routeLink" routerLink="ArrayConversion" (click)="sidenav.toggle()">Array to Bit Conversion</a>
+      <a class="routeLink" routerLink="AnalogConversion" (click)="sidenav.toggle()">Analog Conversion</a>
+      <a class = "routeLink" routerLink="SerialCommunication" (click) = "sidenav.toggle()">Serial Communication</a>
+    </mat-sidenav>
+    <mat-sidenav-content>
+
+      <div id="navigationPages">
+        <router-outlet></router-outlet>
+
+      </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

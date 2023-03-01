@@ -23,15 +23,14 @@
   <div class = "grid-item" id = "typeCompare">
     <table >
       <tr *ngFor="let i of typeTable(); let index = index">
-        <td id = "tableProp">{{ i.name }}</td>
-        <td id = "dataProp">
-          <tr *ngFor = "let j of i.data">
-            <td class = "rowData" >{{ j[1] }}</td>
-            <td class = "rowData">{{ j[2] }}</td>
-            <td class = "rowData">{{ j[3] }}</td>
-            <td class = "rowData">{{ j[4] }}</td>
-            <td class = "rowData">{{ j[5] }}</td>
-          </tr>
+        <td id="tableProp">{{ i.name }}</td>
+        <td id="dataProp">
+      <tr *ngFor="let j of i.data">
+        <td class="rowData">{{ j[1] }}</td>
+        <td class="rowData">{{ j[2] }}</td>
+        <td class="rowData">{{ j[3] }}</td>
+        <td class="rowData">{{ j[4] }}</td>
+      </tr>
     </table>
   </div>
 

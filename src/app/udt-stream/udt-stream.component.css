@@ -1,6 +1,7 @@
 #pageSettings{
   display: grid;
   grid-template-columns: auto;
+  justify-items: center;
   /*height: 100vh;*/
   place-items: center;
 }
@@ -10,28 +11,35 @@ h1{
   text-align: center;
   font-size: xxx-large;
   font-family: "Bradley Hand ITC";
+  line-height: 50px;
 }
 
 .instructions{
   color: lavender;
   justify-items: center;
-
-
-
 }
+
+
 .instructionHeader{
   color: lavender;
 }
 .csv-file-chooser-section{
-  background-color: white;
-  width: 50%;
+  color: black;
+  width: 30em;
+  margin: auto;
 }
+
+#chooseFile{
+  background-color: white;
+
+}
+
 
 #gridContainer{
   display: grid;
   grid-template-columns: auto auto auto auto auto ;
-
 }
+
 #contentContainer{
   justify-content: center;
 }
@@ -42,9 +50,6 @@ h1{
   border: 1px solid darkcyan;
 }
 
-.Example{
-  /*border: 1px solid darkgrey;*/
-}
 
 .exampleInstructions{
   text-align: center;

@@ -12,7 +12,6 @@ import { MatGridListModule } from "@angular/material/grid-list";
 import { MatInputModule } from "@angular/material/input";
 import { MatTableModule } from "@angular/material/table";
 import { UDTStreamComponent } from './udt-stream/udt-stream.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import {RouterModule} from "@angular/router";
 import { HttpClientModule} from '@angular/common/http';
@@ -22,10 +21,10 @@ import { InputSectionComponent } from './input-section/input-section.component';
 import { OutputSectionComponent } from './output-section/output-section.component';
 import { StreamTableComponent } from './stream-table/stream-table.component';
 import { Rs232Component } from './rs232/rs232.component';
-
-
-
-
+import { AppUiModule} from "./app-ui.module";
+import { ArrayConversionComponent } from './array-conversion/array-conversion.component';
+import { AnalogConversionComponent } from './analog-conversion/analog-conversion.component';
+import { SerialCommunicationComponent } from './serial-communication/serial-communication.component';
 
 
 @NgModule({
@@ -33,14 +32,16 @@ import { Rs232Component } from './rs232/rs232.component';
     AppComponent,
     DataTypeConversionComponent,
     UDTStreamComponent,
-    NavbarComponent,
     HomeComponent,
     InputTableComponent,
     OutputTableComponent,
     InputSectionComponent,
     OutputSectionComponent,
     StreamTableComponent,
-    Rs232Component
+    Rs232Component,
+    ArrayConversionComponent,
+    AnalogConversionComponent,
+    SerialCommunicationComponent
   ],
     imports: [
         BrowserModule,
@@ -53,11 +54,14 @@ import { Rs232Component } from './rs232/rs232.component';
         MatGridListModule,
         MatInputModule,
         MatTableModule,
+        AppUiModule,
         RouterModule.forRoot([
           {path: '', component: HomeComponent},
           {path: 'typeConversion', component: DataTypeConversionComponent},
           {path: 'UDTStream', component: UDTStreamComponent},
-          {path: 'rs232', component: Rs232Component}
+          {path: 'ArrayConversion', component: ArrayConversionComponent},
+          {path: 'AnalogConversion', component: AnalogConversionComponent},
+          {path: 'SerialCommunication', component: SerialCommunicationComponent}
         ])
     ],
   providers: [

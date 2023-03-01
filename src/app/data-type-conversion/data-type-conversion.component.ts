@@ -10,16 +10,16 @@ export class DataTypeConversionComponent {
   typeObj: IType;
   dataChanged: boolean=false;
   typeCompare: string[][] = [
-    ["Type of Data","Size (bits)","min","max","Allen Bradley","Seimens"],
-    ["Boolean","1","0","1","BOOL","BOOL"],
-    ["Unsigned Integer","8","0","255","USINT","BYTE"],
-    ["Unsigned Integer","16","0","65535","UINT", "WORD"],
-    ["Unsigned Integer", "32","0","4294967295","UDINT","DWORD"],
-    ["Signed Integer","8","-128","127","SINT","N/A"],
-    ["Signed Integer","16","-32768","32767","INT", "INT"],
-    ["Signed Integer","32", "-2147483648","2147483647","DINT", "DINT"],
-    ["Floating Point","32","-1.16E-38","3.40E+38","REAL","REAL"],
-    ["Character","8","N/A","N/A","STRING","CHAR"]
+    ["Type of Data","Size (bits)","min","max","Name"],
+    ["Boolean","1","0","1","BOOL"],
+    ["Unsigned Integer","8","0","255","BYTE/USINT"],
+    ["Unsigned Integer","16","0","65535","WORD/UINT"],
+    ["Unsigned Integer", "32","0","4294967295","DWORD/UDINT"],
+    ["Signed Integer","8","-128","127","SINT"],
+    ["Signed Integer","16","-32768","32767","INT"],
+    ["Signed Integer","32", "-2147483648","2147483647","DINT"],
+    ["Floating Point","32","-1.16E-38","3.40E+38","REAL"],
+    ["Character","8","N/A","N/A","STRING"]
 
 
   ];

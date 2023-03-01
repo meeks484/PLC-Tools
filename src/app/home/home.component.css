@@ -3,8 +3,30 @@ h1{
   text-align: center;
   font-size: xxx-large;
   font-family: "Bradley Hand ITC";
+  line-height: 50px;
+
 }
 
-#Space{
-  height: 2000px;
+.pageLink{
+  background-color: mediumpurple;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.linkHead{
+  color: black;
+}
+
+.link{
+  font-size: x-large;
+
+}
+
+#gridContainer{
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 10px;
 }
