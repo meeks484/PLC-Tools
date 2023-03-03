@@ -1,0 +1,22 @@
+#pageContainer{
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+}
+
+h1{
+  color: lavender;
+  text-align: center;
+  font-size: xxx-large;
+  font-family: "Bradley Hand ITC";
+  line-height: 50px;
+}
+
+#container{
+  margin: auto;
+  max-width: 50em;
+}
+
+.bullet{
+  padding-bottom: 10px;
+}

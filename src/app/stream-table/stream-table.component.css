@@ -1,0 +1,23 @@
+#container{
+  height: 100%
+}
+
+.streamTable{
+  color: black;
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tableRow{
+
+}
+#tableData{
+  border: 1px solid darkcyan;
+  /*border-collapse: collapse;*/
+
+  color: aliceblue;
+  height: var(--dataHeight);
+  text-align: center;
+
+}

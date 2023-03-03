@@ -1,0 +1,6 @@
+﻿bool,BOOL[15]
+sint,SINT
+dint,DINT
+bool,BOOL[5]
+int,INT[2]
+real,REAL[2]

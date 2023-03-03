@@ -1,0 +1,82 @@
+<div id="pageContainer">
+  <h1>Integer Array And Bit Number Conversions</h1>
+
+
+  <div id="conversionSections">
+    <div id="integer2Bit">
+
+
+
+      <p class="instructions">
+        Example:
+      </p>
+      <ul class = "instructions">
+        <li>The PLC is communicating to a FANUC Robot via Ethernet/IP.
+        <li>The PLC ethernet module has its I/O setup as: SINT[25]
+        <li>The Robot's DI/DO is set to 1 to 200.
+        <li>You need to know what bit on the PLC is shared with the 142nd DI on the robot.
+        <li>Get the array index and bit index by selecting 8 bit, and then enter bit 141.
+        <li>The resulting integer index is 17, the bit index is 5.</li>
+      </ul>
+
+      <p class="instructions">
+        Get the bit number from an integer array index and bit index.<br>
+      </p>
+
+      <div id="Integer2BitGrid">
+        <label class="label">Select Size of Integer Type: </label>
+        <select class="dropDown" #types (change)="integerSelected(types.value)">
+          <option value="8">8 bit</option>
+          <option value="16">16 bit</option>
+          <option value="32">32 bit</option>
+        </select>
+
+        <label class="label">Enter the Integer Index:[Idx]  </label>
+        <input class = "inputNumbers" type=number [(ngModel)]="integerIndex" (change)="calcBitNumber()">
+
+        <label class="label">Enter the Bit Index: .xx  </label>
+        <input class = "inputNumbers" type=number [(ngModel)]="bitIndex" (change)="calcBitNumber()">
+
+        <div class = "space"></div>
+
+        <label class="label">The bit number is:  </label>
+        <input class = "outputNumber" type=number [(ngModel)]="bitNumber" readonly>
+
+        <div class = "space"></div>
+      </div>
+
+    </div>
+
+    <div id="bit2Integer">
+      <p class="instructions" style="padding-top: 15px">
+        <br>Get the array index, and bit index from a bit number (reverse conversion as above).
+      </p>
+
+      <div id="Bit2IntegerGrid">
+        <label class="label">Select Size of Integer Type: </label>
+        <select class="dropDown" #bitTypes (change)="bitSelected(bitTypes.value)">
+          <option value="8">8 bit</option>
+          <option value="16">16 bit</option>
+          <option value="32">32 bit</option>
+        </select>
+
+        <label class="label">Enter the Bit Number:  </label>
+        <input [(ngModel)]="setBitNumber" (change)="bitNumberEntry()">
+
+        <div class = "space"></div>
+
+        <label class="label">The Integer Index [Idx] number is: </label>
+        <input class = "outputNumber" type=number [(ngModel)]="arrayIndex" readonly>
+
+        <label class="label">The bit index .xx number is: </label>
+        <input class = "outputNumber" type=number [(ngModel)]="getBitIndex" readonly>
+
+        <div class = "space"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+

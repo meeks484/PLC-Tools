@@ -1,0 +1,28 @@
+<div id = "pageContainer">
+  <h1>Analog Conversion</h1>
+
+  <div id = "analogSection">
+    <label class="label">Enter the Low Raw Number</label>
+    <input class = "inputNumbers" type=number [(ngModel)]="lowRawNumber" (change)="calc()">
+
+    <label class="label">Enter the High Raw Number</label>
+    <input class = "inputNumbers" type=number [(ngModel)]="highRawNumber" (change)="calc()">
+
+    <label class="label">Enter the Low Process Value</label>
+    <input class = "inputNumbers" type=number [(ngModel)]="lowProcessValue" (change)="calc()">
+
+    <label class="label">Enter the High Process Value</label>
+    <input class = "inputNumbers" type=number [(ngModel)]="highProcessValue" (change)="calc()">
+
+    <div class = "Space"></div>
+    <div class = "Space"></div>
+    <label class="label">Enter the Raw Input Value</label>
+    <input class="inputNumbers" type=number [(ngModel)]="rawInputValue" (change)="calc()">
+
+    <div class = "Space"></div>
+    <div class = "Space"></div>
+    <label class="label">The Process Value Output is</label>
+    <input class = "outputNumbers" type = number [(ngModel)] = "processValueOutput" readonly>
+
+  </div>
+</div>

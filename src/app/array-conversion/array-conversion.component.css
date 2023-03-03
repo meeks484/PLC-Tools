@@ -1,0 +1,55 @@
+#pageContainer{
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+}
+
+h1{
+  color: lavender;
+  text-align: center;
+  font-size: xxx-large;
+  font-family: "Bradley Hand ITC";
+  line-height: 50px;
+}
+
+.instructions{
+  color: lavender;
+
+}
+
+.label{
+  color: lavender;
+
+}
+
+#Integer2BitGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15em 60px;
+  grid-gap: 5px;
+  border-bottom: solid aliceblue 2px;
+}
+
+
+#Bit2IntegerGrid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15em 60px;
+  grid-gap: 5px;
+  border-bottom: solid aliceblue 2px;
+}
+
+
+.outputNumber{
+  background-color: lightgrey;
+  height: 1.2em;
+}
+
+.space{
+  height: 10px;
+  grid-column: 1 / span 2;
+}
+
+
+
+

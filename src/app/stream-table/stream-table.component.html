@@ -1,0 +1,7 @@
+<div id = "container">
+  <table class = "streamTable">
+    <tr id = "tableRow" *ngFor="let row of arrayStream;let i = index">
+      <td id = "tableData" [style.--dataHeight.%]="rowSpan[i]" > {{row}}</td>
+    </tr>
+  </table>
+</div>

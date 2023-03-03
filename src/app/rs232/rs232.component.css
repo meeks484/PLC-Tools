@@ -1,0 +1,16 @@
+h1{
+  color: lavender;
+  text-align: center;
+  font-size: xxx-large;
+  font-family: "Bradley Hand ITC";
+}
+
+.instructions{
+  color: lavender;
+}
+
+.scroll{
+  color: lavender;
+  width: 100px;
+  overflow-x: auto;
+}

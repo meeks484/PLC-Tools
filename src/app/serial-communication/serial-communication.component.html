@@ -1,0 +1,61 @@
+<div id="pageContainer">
+
+<h1>
+  Serial Communications
+</h1>
+  <div id="container">
+    <h2>RS-232</h2>
+    <ul>
+      <li class="bullet">Transmits binary data on a wire where:</li>
+      <ul>
+        <li class="bullet">+5 to +12 volts = binary value 0</li>
+        <li class="bullet">-5 to -12 volts = binary value 1</li>
+      </ul>
+      <li class="bullet">Uses a UART transmitter to transmit the signals.</li>
+      <li class="bullet">Three wires are used:</li>
+      <ul>
+        <li class="bullet">Tx: Used for transmitting data</li>
+        <li class="bullet">Rx: Used for receiving data</li>
+        <li class="bullet">GND: 0V ground reference for Tx and Rx</li>
+      </ul>
+      <li class="bullet">A BAUD rate (bits/s) is used to keep track of each pulse.</li>
+      <li class="bullet">The last bit is sometimes used as a parity bit.</li>
+      <ul>
+        <li>The parity bit helps determine if data was corrupted during transfer</li>
+      </ul>
+    </ul>
+    <h2>RS-485</h2>
+    <ul>
+      <li class="bullet">Transmits binary data on two twisted wires:</li>
+      <ul>
+        <li class="bullet">The first wire is named D+</li>
+        <li class="bullet">The second wire is named D-</li>
+        <li class="bullet">Binary values are represented by a voltage differential between the two wires.</li>
+        <li class="bullet">([D+] - [D-]) < -200mV represents a binary value of 1</li>
+        <li class="bullet">([D+] - [D-]) > +200mV represents a binary value of 0</li>
+      </ul>
+      <li class="bullet">Also uses a UART transmitter to transmit signals.</li>
+      <li class="bullet">More immune to electrical noise than RS-232</li>
+      <li class="bullet">Faster than RS-232</li>
+      <li class="bullet">Why is RS-485 more immune to electrical noise than RS-232?</li>
+      <ul>
+        <li class="bullet">The twisted wires mean electrical noise effects the D+ and D- signals equally.</li>
+        <li class="bullet">Since the data is dependent a voltage differential, and electrical noise effects both wires
+          equally,
+          The differential voltage is not affected. Each line may change several volts with respect to ground, but
+          the difference between the two remains the same.
+        </li>
+      </ul>
+
+      <li class="bullet">Why is RS-485 faster than RS-232 if they both use UART Transmitters?</li>
+      <ul>
+        <li class="bullet">RS-485 has a lower voltage swing between 0 and 1. RS-232 needs to swing from -5 (or-12)
+          to +5 (or +12) to change from 1 to 0. Whereas RS-485 only needs to swing from -200 mV to +200mV
+        </li>
+      </ul>
+
+    </ul>
+
+  </div>
+</div>
+
